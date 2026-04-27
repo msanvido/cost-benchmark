@@ -1,0 +1,25 @@
+# Run artifacts
+*.log
+*_run.csv
+*_probe.csv
+*.tmp.csv
+
+# Local secrets — never commit
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# uv cache (when using --project mode)
+.uv-cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
