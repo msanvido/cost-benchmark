@@ -1,7 +1,8 @@
-# Run artifacts
+# Run artifacts — committed runs live under data/ with dated filenames.
+# Undated CSVs at the repo root are local scratch and excluded.
 *.log
-*_run.csv
-*_probe.csv
+/*_run.csv
+/*_probe.csv
 *.tmp.csv
 
 # Local secrets — never commit

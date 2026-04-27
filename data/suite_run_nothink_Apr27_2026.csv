@@ -1,0 +1,461 @@
+query_label,model,trial,correct,answer,input_tokens,output_tokens,reasoning_tokens,total_tokens,cost_usd,latency_s,error
+apples,anthropic/claude-opus-4.7,1,True,18,61,6,0,67,0.00045500,0.9497,
+apples,anthropic/claude-opus-4.6,1,True,18,53,5,0,58,0.00039000,1.9499,
+apples,anthropic/claude-opus-4.5,1,True,18,53,5,0,58,0.00039000,1.7901,
+apples,google/gemini-3.1-pro-preview,1,True,18,41,145,143,186,0.00182200,3.0572,
+apples,google/gemini-2.5-pro,1,True,18,41,430,428,471,0.00435125,5.3217,
+apples,google/gemini-2.0-flash-001,1,False,36,41,3,0,44,0.00000530,0.5550,
+apples,openai/gpt-5.5,1,True,18,47,40,33,87,0.00143500,4.1060,
+apples,openai/gpt-5.4,1,True,18,47,5,0,52,0.00019250,0.8769,
+apples,openai/gpt-5.2,1,True,18,47,31,24,78,0.00051625,2.8786,
+apples,deepseek/deepseek-v4-pro,1,True,18,45,136,110,181,0.00069290,2.3532,
+apples,deepseek/deepseek-v3.2,1,True,"Alright, let’s break it down:  
+
+1. Start with **4 apples**.  
+2. Buy **8 more**:  
+   \( 4 + 8 = 12 \) apples.  
+
+3. Give **half** to a friend:  
+   \( \frac{12}{2} = 6 \) given away.  
+   Left: \( 12 - 6 = 6 \) apples.  
+
+4. **Triple** what’s left:  
+   \( 6 \times 3 = 18 \) apples.  
+
+Final: **18**  
+
+Answer: **18**",45,124,0,169,0.00006840,4.5605,
+apples,deepseek/deepseek-chat,1,True,"Let's break down the problem step by step:
+
+1. **Initial apples**: You have 4 apples.
+2. **Buy more apples**: You buy 8 more apples.
+   - Total apples now: \(4 + 8 = 12\) apples.
+3. **Give half to a friend**: You give half of your apples to a friend.
+   - Apples given away: \(12 \div 2 = 6\) apples.
+   - Apples remaining: \(12 - 6 = 6\) apples.
+4. **Triple the remaining apples**: You triple what you have left.
+   - Final number of apples: \(6 \times 3 = 18\) apples.
+
+**Final Answer**: \(\boxed{18}\)",44,151,0,195,0.00021390,4.5198,
+apples,qwen/qwen3.6-max-preview,1,True,18,51,238,231,289,0.00192270,6.4166,
+apples,qwen/qwen3-max,1,True,18,49,2,0,51,0.00004602,1.1470,
+apples,qwen/qwen-max,1,True,18,49,2,0,51,0.00005928,0.6566,
+crt,anthropic/claude-opus-4.7,1,True,"N ≡ 1 (mod 3), N ≡ 2 (mod 5), N ≡ 3 (mod 7).
+
+N=52 works (52=3·17+1, 52=5·10+2, 52=7·7+3). Add 105: 157.
+
+**157**",86,91,0,177,0.00270500,1.7269,
+crt,anthropic/claude-opus-4.6,1,True,"I need to find the smallest N > 100 such that:
+- N ≡ 1 (mod 3)
+- N ≡ 2 (mod 5)
+- N ≡ 3 (mod 7)
+
+**Solving with Chinese Remainder Theorem:**
+
+From the first condition: N = 3k + 1
+
+Substituting into the second condition: 3k + 1 ≡ 2 (mod 5), so 3k ≡ 1 (mod 5). The inverse of 3 mod 5 is 2 (since 3·2 = 6 ≡ 1), so k ≡ 2 (mod 5), meaning k = 5m + 2.
+
+Thus N = 3(5m + 2) + 1 = 15m + 7.
+
+Substituting into the third condition: 15m + 7 ≡ 3 (mod 7), so 15m ≡ -4 ≡ 3 (mod 7). Since 15 ≡ 1 (mod 7), we get m ≡ 3 (mod 7), so m = 7j + 3.
+
+Thus N = 15(7j + 3) + 7 = 105j + 52.
+
+**Finding smallest N > 100:**
+
+- j = 0: N = 52 (too small)
+- j = 1: N = 157 ✓
+
+**Verification:** 157 ÷ 3 = 52 remainder 1 ✓, 157 ÷ 5 = 31 remainder 2 ✓, 157 ÷ 7 = 22 remainder 3 ✓
+
+The answer is **157**.",64,446,0,510,0.01147000,6.2689,
+crt,anthropic/claude-opus-4.5,1,True,"I need to find the smallest N > 100 where:
+- N ≡ 1 (mod 3)
+- N ≡ 2 (mod 5)
+- N ≡ 3 (mod 7)
+
+Let me solve this system using the Chinese Remainder Theorem.
+
+From the first condition: N = 3k + 1 for some integer k.
+
+Substituting into the second condition:
+3k + 1 ≡ 2 (mod 5)
+3k ≡ 1 (mod 5)
+k ≡ 2 (mod 5) (since 3 × 2 = 6 ≡ 1 mod 5)
+
+So k = 5j + 2, meaning N = 3(5j + 2) + 1 = 15j + 7
+
+Now applying the third condition:
+15j + 7 ≡ 3 (mod 7)
+15j ≡ -4 ≡ 3 (mod 7)
+1j ≡ 3 (mod 7) (since 15 ≡ 1 mod 7)
+j ≡ 3 (mod 7)
+
+So j = 7m + 3, meaning N = 15(7m + 3) + 7 = 105m + 45 + 7 = 105m + 52
+
+The general solution is N = 105m + 52.
+
+For m = 0: N = 52
+For m = 1: N = 157
+
+Since we need N > 100, the answer is **157**.",64,400,0,464,0.01032000,4.8546,
+crt,google/gemini-3.1-pro-preview,1,True,157,55,781,778,836,0.00948200,14.4290,
+crt,google/gemini-2.5-pro,1,True,157,55,2833,2830,2888,0.02839875,23.1749,
+crt,google/gemini-2.0-flash-001,1,True,"Let $N$ be the integer such that $N > 100$, $N \equiv 1 \pmod{3}$, $N \equiv 2 \pmod{5}$, and $N \equiv 3 \pmod{7}$.
+We are looking for a number $N$ that satisfies these congruences.
+From $N \equiv 1 \pmod{3}$, we have $N = 3k+1$ for some integer $k$.
+Plugging this into the second congruence, we have $3k+1 \equiv 2 \pmod{5}$. Then $3k \equiv 1 \pmod{5}$. Multiplying by 2, we get $6k \equiv 2 \pmod{5}$, so $k \equiv 2 \pmod{5}$. Thus $k = 5j+2$ for some integer $j$, and $N = 3(5j+2) + 1 = 15j+6+1 = 15j+7$.
+Plugging this into the third congruence, we have $15j+7 \equiv 3 \pmod{7}$. Then $15j \equiv -4 \pmod{7}$, so $j \equiv -4 \pmod{7}$, which is $j \equiv 3 \pmod{7}$. Thus $j = 7l+3$ for some integer $l$, so
+$N = 15(7l+3) + 7 = 105l+45+7 = 105l + 52$.
+We want the smallest $N > 100$.
+When $l=0$, we have $N = 52$, which is too small.
+When $l=1$, we have $N = 105+52 = 157$.
+$157 = 3 \times 52 + 1$, so $157 \equiv 1 \pmod{3}$.
+$157 = 5 \times 31 + 2$, so $157 \equiv 2 \pmod{5}$.
+$157 = 7 \times 22 + 3$, so $157 \equiv 3 \pmod{7}$.
+Thus $N=157$ is a solution.
+
+Final Answer: The final answer is $\boxed{157}$",55,515,0,570,0.00021150,3.6625,
+crt,openai/gpt-5.5,1,True,157,59,163,156,222,0.00518500,6.0745,
+crt,openai/gpt-5.4,1,True,157,59,5,0,64,0.00022250,1.0206,
+crt,openai/gpt-5.2,1,True,157,59,207,200,266,0.00300125,5.7316,
+crt,deepseek/deepseek-v4-pro,1,True,157,57,397,395,454,0.00148074,11.0521,
+crt,deepseek/deepseek-v3.2,1,True,"Alright, let’s go step-by-step.
+
+---
+
+We are told:
+
+\[
+N > 100
+\]
+\[
+N \equiv 1 \pmod{3}
+\]
+\[
+N \equiv 2 \pmod{5}
+\]
+\[
+N \equiv 3 \pmod{7}
+\]
+
+---
+
+**Step 1: Solve the first two congruences.**
+
+From  
+\[
+N \equiv 1 \ (\text{mod } 3), \quad N \equiv 2 \ (\text{mod } 5)
+\]
+
+Let \(N = 3a + 1\).  
+
+Substitute into second congruence:
+\[
+3a + 1 \equiv 2 \pmod{5}
+\]
+\[
+3a \equiv 1 \pmod{5}
+\]
+Inverse of 3 mod 5 is 2 (since \(3 \times 2 = 6 \equiv 1\)).
+Multiply both sides by 2:
+\[
+a \equiv 2 \pmod{5}
+\]
+So \(a = 5k + 2\).
+
+Thus \(N = 3(5k + 2) + 1 = 15k + 6 + 1 = 15k + 7\).
+
+So:
+\[
+N \equiv 7 \pmod{15}.
+\]
+
+Check: mod 3 → \(7 \equiv 1\) ✓, mod 5 → \(7 \equiv 2\) ✓.
+
+---
+
+**Step 2: Add the third congruence \(N \equiv 3 \ (\text{mod } 7)\).**
+
+We have \(N = 15k + 7 \equiv 3 \pmod{7}\).
+
+Compute \(15 \mod 7 = 1\), so \(15k + 7 \equiv k + 7 \pmod{7}\).
+But \(7 \equiv 0\) mod 7, so:
+
+\[
+k + 0 \equiv 3 \pmod{7}
+\]
+\[
+k \equiv 3 \pmod{7}
+\]
+
+So \(k = 7t + 3\).
+
+---
+
+**Step 3: Write general solution.**
+
+\[
+N = 15(7t + 3) + 7 = 105t + 45 + 7 = 105t + 52.
+\]
+
+Thus:
+\[
+N \equiv 52 \pmod{105}.
+\]
+
+---
+
+**Step 4: Smallest \(N > 100\).**
+
+For \(t = 0\), \(N = 52\) (too small).  
+For \(t = 1\), \(N = 157\) (this is >100).  
+
+Check:  
+157 ÷ 3 = 52 remainder 1 ✓  
+157 ÷ 5 = 31 remainder 2 ✓  
+157 ÷ 7 = 22 remainder 3 ✓
+
+---
+
+**Step 5: Verify there’s no smaller solution between 100 and 157.**  
+
+Next lower possible solution is 52 (less than 100). Next in sequence would be \(52 + 105 = 157\) indeed.
+
+---
+
+So the answer is:
+\[
+\boxed{157}
+\]",57,661,0,718,0.00026600,21.6132,
+crt,deepseek/deepseek-chat,1,True,"To find the smallest positive integer \( N > 100 \) that satisfies the given congruences:
+
+\[
+\begin{cases}
+N \equiv 1 \pmod{3} \\
+N \equiv 2 \pmod{5} \\
+N \equiv 3 \pmod{7}
+\end{cases}
+\]
+
+we can proceed with the following steps:
+
+### Step 1: Solve the First Two Congruences
+
+First, solve for \( N \) in the first two congruences:
+
+1. \( N \equiv 1 \pmod{3} \)
+2. \( N \equiv 2 \pmod{5} \)
+
+Let \( N = 3k + 1 \) for some integer \( k \). Substitute into the second congruence:
+
+\[
+3k + 1 \equiv 2 \pmod{5} \\
+3k \equiv 1 \pmod{5} \\
+\]
+
+To solve \( 3k \equiv 1 \pmod{5} \), find the modular inverse of 3 modulo 5. Since \( 3 \times 2 = 6 \equiv 1 \pmod{5} \), the inverse is 2. Thus:
+
+\[
+k \equiv 2 \pmod{5} \\
+\]
+
+Let \( k = 5m + 2 \) for some integer \( m \). Substitute back to find \( N \):
+
+\[
+N = 3(5m + 2) + 1 = 15m + 7
+\]
+
+So, \( N \equiv 7 \pmod{15} \).
+
+### Step 2: Incorporate the Third Congruence
+
+Now, solve the third congruence with the result from Step 1:
+
+\[
+N \equiv 3 \pmod{7} \\
+15m + 7 \equiv 3 \pmod{7} \\
+15m \equiv -4 \pmod{7} \\
+15 \equiv 1 \pmod{7} \Rightarrow m \equiv -4 \pmod{7} \\
+m \equiv 3 \pmod{7} \quad (\text{since } -4 \equiv 3 \pmod{7})
+\]
+
+Let \( m = 7n + 3 \) for some integer \( n \). Substitute back to find \( N \):
+
+\[
+N = 15(7n + 3) + 7 = 105n + 52
+\]
+
+So, the general solution is \( N \equiv 52 \pmod{105} \).
+
+### Step 3: Find the Smallest \( N > 100 \)
+
+We seek the smallest \( N > 100 \) satisfying \( N \equiv 52 \pmod{105} \):
+
+\[
+N = 105n + 52
+\]
+
+Find the smallest integer \( n \) such that \( N > 100 \):
+
+\[
+105n + 52 > 100 \\
+105n > 48 \\
+n > \frac{48}{105} \approx 0.457
+\]
+
+The smallest integer \( n \) satisfying this is \( n = 1 \):
+
+\[
+N = 105(1) + 52 = 157
+\]
+
+**Verification:**
+
+- \( 157 \div 3 = 52 \) with a remainder of \( 1 \) ✓
+- \( 157 \div 5 = 31 \) with a remainder of \( 2 \) ✓
+- \( 157 \div 7 = 22 \) with a remainder of \( 3 \) ✓
+
+Thus, the smallest positive integer \( N > 100 \) that satisfies all the given conditions is:
+
+\[
+\boxed{157}
+\]",56,760,0,816,0.00101040,19.0356,
+crt,qwen/qwen3.6-max-preview,1,True,157,65,1749,1741,1814,0.01372670,40.3772,
+crt,qwen/qwen3-max,1,True,157,63,3,0,66,0.00006084,1.1964,
+crt,qwen/qwen-max,1,False,106,63,3,0,66,0.00007800,0.6592,
+siblings,anthropic/claude-opus-4.7,1,True,3,59,6,0,65,0.00044500,1.2320,
+siblings,anthropic/claude-opus-4.6,1,True,3,39,5,0,44,0.00032000,1.9275,
+siblings,anthropic/claude-opus-4.5,1,True,3,39,5,0,44,0.00032000,2.0274,
+siblings,google/gemini-3.1-pro-preview,1,True,3,31,234,233,265,0.00287000,3.6514,
+siblings,google/gemini-2.5-pro,1,True,3,31,372,371,403,0.00375875,5.0222,
+siblings,google/gemini-2.0-flash-001,1,True,3,31,2,0,33,0.00000390,0.4997,
+siblings,openai/gpt-5.5,1,True,3,36,41,34,77,0.00141000,3.9957,
+siblings,openai/gpt-5.4,1,True,3,36,5,0,41,0.00016500,0.8368,
+siblings,openai/gpt-5.2,1,True,3,36,34,27,70,0.00053900,1.7698,
+siblings,deepseek/deepseek-v4-pro,1,True,3,34,119,117,153,0.00047328,5.2011,
+siblings,deepseek/deepseek-v3.2,1,False,5,34,1,0,35,0.00000955,1.2731,
+siblings,deepseek/deepseek-chat,1,True,"Alright, let's tackle this problem step by step to understand how many sisters each of Alice's brothers has.
+
+### Understanding the Problem
+
+We are given the following information:
+- Alice has 3 brothers and 2 sisters.
+
+The question asks:
+- How many sisters does each of Alice's brothers have?
+
+We need to determine the number of sisters from the perspective of one of Alice's brothers.
+
+### Breaking Down the Family Members
+
+First, let's list out all the siblings in Alice's family based on the information given.
+
+1. **Alice**: She is one child in the family.
+2. **Brothers**: Alice has 3 brothers.
+3. **Sisters**: Alice has 2 sisters.
+
+Now, let's count the total siblings:
+- Alice
+- 3 brothers
+- 2 sisters
+
+So, the siblings are: Alice, Brother1, Brother2, Brother3, Sister1, Sister2.
+
+This makes a total of 6 children in the family: Alice, 3 brothers, and 2 sisters.
+
+### Clarifying the Relationships
+
+Now, let's think about the siblings from the perspective of one of Alice's brothers. 
+
+For any one brother:
+- Their siblings include:
+  - Alice
+  - The other 2 brothers (since we're considering one brother, he doesn't count himself)
+  - The 2 sisters
+
+Wait a minute, let's clarify this because it's crucial.
+
+From one brother's perspective:
+- His brothers: Since there are 3 brothers in total, excluding himself, he has 2 brothers.
+- His sisters: These would be Alice and the 2 sisters mentioned.
+
+But is Alice considered a sister to her brothers? Yes, Alice is a sister to her brothers because she is female, and her brothers are male.
+
+So, the sisters each brother has are:
+1. Alice
+2. Sister1
+3. Sister2
+
+That would mean each brother has 3 sisters: Alice and the 2 other sisters.
+
+But let's double-check the initial information to ensure we're interpreting it correctly.
+
+### Re-evaluating the Initial Information
+
+The problem states:
+- Alice has 3 brothers and 2 sisters.
+
+This means, excluding Alice, there are:
+- 3 brothers
+- 2 sisters
+
+So, the siblings are:
+1. Alice
+2. Brother1
+3. Brother2
+4. Brother3
+5. Sister1
+6. Sister2
+
+Now, from Brother1's perspective:
+- Sisters: Alice, Sister1, Sister2 → 3 sisters
+- Brothers: Brother2, Brother3 → 2 brothers
+
+Similarly, this applies to Brother2 and Brother3.
+
+But wait, the initial statement says Alice has 2 sisters. That would mean, apart from Alice, there are 2 other girls in the family (Sister1 and Sister2). So, the sisters are Alice, Sister1, Sister2, making it seem like there are 3 girls total (Alice + 2 sisters). But the phrasing ""Alice has 2 sisters"" implies that excluding Alice, there are 2 sisters, so total girls are Alice + 2 sisters = 3 girls.
+
+Therefore, each brother's sisters are the 3 girls in the family: Alice and her 2 sisters.
+
+### Verifying with an Example
+
+Let's name the siblings to make it clearer:
+- Girls: Alice, Betty, Carol
+- Boys: David, Edward, Frank
+
+Here:
+- Alice has 3 brothers: David, Edward, Frank
+- Alice has 2 sisters: Betty, Carol
+
+Now, take one brother, say David:
+- David's sisters: Alice, Betty, Carol → 3 sisters
+
+Same for Edward and Frank.
+
+This confirms that each brother has 3 sisters.
+
+### Potential Misinterpretation
+
+Initially, one might think that ""Alice has 2 sisters"" refers to sisters other than Alice, implying Alice is not counted among the sisters from the brothers' perspective. But actually, from a brother's viewpoint, Alice is indeed one of their sisters.
+
+So, the sisters each brother has are:
+- Alice
+- Sister1
+- Sister2
+
+Total: 3 sisters per brother.
+
+### Conclusion
+
+After carefully analyzing the family structure and considering the relationships from the perspective of Alice's brothers, each brother has:
+
+**3 sisters**
+
+Therefore, the answer is:
+
+3",33,893,0,926,0.00117410,23.2782,
+siblings,qwen/qwen3.6-max-preview,1,True,3,40,648,643,688,0.00510640,17.2906,
+siblings,qwen/qwen3-max,1,True,3,38,1,0,39,0.00003354,1.1094,
+siblings,qwen/qwen-max,1,False,2,38,1,0,39,0.00004368,0.5776,

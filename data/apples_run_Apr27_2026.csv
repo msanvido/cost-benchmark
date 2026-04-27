@@ -1,0 +1,123 @@
+model,trial,correct,answer,input_tokens,output_tokens,reasoning_tokens,total_tokens,cost_usd,latency_s,error
+anthropic/claude-opus-4.7,1,True,18,61,6,0,67,0.00045500,0.9997,
+anthropic/claude-opus-4.7,2,True,18,61,6,0,67,0.00045500,0.8559,
+anthropic/claude-opus-4.7,3,True,18,61,6,0,67,0.00045500,0.8644,
+anthropic/claude-opus-4.6,1,True,"Starting with 4 apples, buying 8 more gives 12. Giving half away leaves 6. Tripling that gives **18**.",53,36,0,89,0.00116500,2.2299,
+anthropic/claude-opus-4.6,2,True,"Starting with 4 apples + 8 = 12 apples.
+
+Give half away: 12 / 2 = 6 apples.
+
+Triple what's left: 6 × 3 = 18 apples.
+
+**18**",53,64,0,117,0.00186500,2.4797,
+anthropic/claude-opus-4.6,3,True,18,53,5,0,58,0.00039000,2.0324,
+anthropic/claude-opus-4.5,1,True,18,53,5,0,58,0.00039000,1.7754,
+anthropic/claude-opus-4.5,2,True,18,53,5,0,58,0.00039000,1.7720,
+anthropic/claude-opus-4.5,3,True,18,53,5,0,58,0.00039000,1.6447,
+google/gemini-3.1-pro-preview,1,True,18,41,120,118,161,0.00152200,3.0963,
+google/gemini-3.1-pro-preview,2,True,18,41,187,185,228,0.00232600,2.9068,
+google/gemini-3.1-pro-preview,3,True,18,41,161,159,202,0.00201400,3.0566,
+google/gemini-2.5-pro,1,True,18,41,423,421,464,0.00428125,5.7429,
+google/gemini-2.5-pro,2,True,18,41,347,345,388,0.00352125,4.8325,
+google/gemini-2.5-pro,3,True,18,41,346,344,387,0.00351125,4.3457,
+google/gemini-2.0-flash-001,1,,,0,0,,0,,5.3245,"HTTP 504: {""error"":{""message"":""The operation was aborted"",""code"":504,""metadata"":{""provider_name"":""Google""}},""user_id"":""user_3C8lSSxQuurpJpKGGT1sUC2IhbD""}"
+google/gemini-2.0-flash-001,2,,,0,0,,0,,6.0476,"HTTP 429: {""error"":{""message"":""Provider returned error"",""code"":429,""metadata"":{""raw"":""google/gemini-2.0-flash-001 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate yo"
+google/gemini-2.0-flash-001,3,False,30,41,3,0,44,0.00000530,0.5317,
+openai/gpt-5.5,1,True,18,47,41,34,88,0.00146500,3.6615,
+openai/gpt-5.5,2,True,18,47,38,31,85,0.00137500,3.3509,
+openai/gpt-5.5,3,True,18,47,40,33,87,0.00143500,3.4666,
+openai/gpt-5.4,1,True,18,47,5,0,52,0.00019250,0.7598,
+openai/gpt-5.4,2,True,18,47,5,0,52,0.00019250,0.9206,
+openai/gpt-5.4,3,True,18,47,5,0,52,0.00019250,0.8007,
+openai/gpt-5.2,1,True,18,47,31,24,78,0.00051625,3.9627,
+openai/gpt-5.2,2,True,18,47,33,26,80,0.00054425,2.0544,
+openai/gpt-5.2,3,True,18,47,31,24,78,0.00051625,2.8860,
+deepseek/deepseek-v4-pro,1,True,18,45,73,71,118,0.00033234,3.3576,
+deepseek/deepseek-v4-pro,2,True,18,45,127,125,172,0.00052026,4.7276,
+deepseek/deepseek-v4-pro,3,True,18,45,127,125,172,0.00052026,3.8879,
+deepseek/deepseek-v3.2,1,True,"Let’s go step by step.
+
+1. Start with 4 apples.  
+   Buy 8 more → \( 4 + 8 = 12 \) apples.  
+
+2. Give half to a friend → \( 12 \div 2 = 6 \) apples given away.  
+   Left with \( 12 - 6 = 6 \) apples.  
+
+3. Triple what’s left → \( 6 \times 3 = 18 \) apples.  
+
+Final: **18**",51,104,0,155,0.00005278,4.7964,
+deepseek/deepseek-v3.2,2,True,"Let's go step by step.  
+
+1. **Start with 4 apples and buy 8 more:**  
+   \( 4 + 8 = 12 \) apples.  
+
+2. **Give half to a friend:**  
+   \( 12 \times \frac{1}{2} = 6 \) given away, so \( 12 - 6 = 6 \) left.  
+
+3. **Triple what’s left:**  
+   \( 6 \times 3 = 18 \) apples.  
+
+Final number: **18**.",45,113,0,158,0.00005731,3.9645,
+deepseek/deepseek-v3.2,3,True,"Alright, let’s break it down.
+
+---
+
+1. **Start with 4 apples.**
+   
+2. **Buy 8 more:**  
+   \( 4 + 8 = 12 \) apples.
+
+3. **Give half to a friend:**  
+   \( \frac{12}{2} = 6 \) given away, leaving \( 6 \) apples.
+
+4. **Triple what’s left:**  
+   \( 6 \times 3 = 18 \) apples.
+
+---
+
+Final number: **18**.",45,108,0,153,0.00005530,3.8618,
+deepseek/deepseek-chat,1,True,18,44,2,0,46,0.00001586,2.9757,
+deepseek/deepseek-chat,2,True,"Let's break down the problem step by step:
+
+1. **Initial apples**: 4
+2. **Apples bought**: +8  
+   **Total after buying**: 4 + 8 = 12 apples
+3. **Give half to a friend**: 12 ÷ 2 = 6 apples given away  
+   **Remaining apples**: 12 - 6 = 6 apples
+4. **Triple the remaining apples**: 6 × 3 = 18 apples
+
+**Final number of apples**: 18
+
+\boxed{18}",44,116,0,160,0.00016840,3.8007,
+deepseek/deepseek-chat,3,True,"Let's break down the problem step by step:
+
+1. **Initial Apples**: You start with 4 apples.
+2. **Buy More Apples**: You buy 8 more apples.
+   \[
+   4 + 8 = 12 \text{ apples}
+   \]
+3. **Give Half to a Friend**: You give half of your apples to a friend.
+   \[
+   \frac{12}{2} = 6 \text{ apples given away}
+   \]
+   \[
+   12 - 6 = 6 \text{ apples remaining}
+   \]
+4. **Triple the Remaining Apples**: You triple the apples you have left.
+   \[
+   6 \times 3 = 18 \text{ apples}
+   \]
+
+**Final Answer**:
+\[
+\boxed{18}
+\]",44,173,0,217,0.00024250,5.1815,
+qwen/qwen3.6-max-preview,1,True,18,51,262,256,313,0.00210990,10.0981,
+qwen/qwen3.6-max-preview,2,True,18,51,262,255,313,0.00210990,14.5785,
+qwen/qwen3.6-max-preview,3,True,18,51,256,249,307,0.00206310,10.4482,
+qwen/qwen3-max,1,True,18,49,2,0,51,0.00004602,1.3220,
+qwen/qwen3-max,2,True,18,49,2,0,51,0.00004602,1.1737,
+qwen/qwen3-max,3,True,18,49,2,0,51,0.00004602,1.4738,
+qwen/qwen-max,1,True,18,49,2,0,51,0.00005928,0.7930,
+qwen/qwen-max,2,False,36,49,2,0,51,0.00005928,0.5841,
+qwen/qwen-max,3,False,36,49,2,0,51,0.00005928,0.5558,
