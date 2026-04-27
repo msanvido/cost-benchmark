@@ -137,10 +137,10 @@ def make_figure(thinking_csv: Path, nothink_csv: Path, out_path: Path):
         "siblings": 'Logic trap (Alice\'s sisters) → 3',
     }
 
-    # Stable model order: family, then by aggregate cost ascending across all panels
+    # Sort by aggregate dollars spent across all panels (most expensive at top).
+    model_avg_cost = df.groupby("model")["cost_usd"].mean()
     all_models = sorted(df["model"].unique(),
-                        key=lambda m: (family_of(m),
-                                       df.loc[df["model"] == m, "cost_usd"].mean()))
+                        key=lambda m: model_avg_cost[m], reverse=True)
 
     # Per-prompt max cost across both modes for shared x-axis within a column
     col_max = {p: df.loc[df["query_label"] == p, "cost_usd"].max() * 1000 * 1.0
