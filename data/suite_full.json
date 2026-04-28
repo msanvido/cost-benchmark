@@ -1,0 +1,17 @@
+[
+  {
+    "label": "apples",
+    "query": "I have 4 apples and buy 8 more. I give half of my apples to a friend, then I triple what I have left. How many apples do I have? Just give the number.",
+    "expect": "18"
+  },
+  {
+    "label": "siblings",
+    "query": "Alice has 3 brothers and 2 sisters. How many sisters does each of Alice's brothers have? Answer with only the number, nothing else.",
+    "expect": "3"
+  },
+  {
+    "label": "crt",
+    "query": "Find the smallest positive integer N greater than 100 such that N leaves a remainder of 1 when divided by 3, a remainder of 2 when divided by 5, and a remainder of 3 when divided by 7. Just give the number.",
+    "expect": "157"
+  }
+]
