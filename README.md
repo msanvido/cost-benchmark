@@ -3,12 +3,14 @@
 A tiny benchmark for measuring **what an LLM call actually costs** — not what
 its price page says it costs.
 
-Built to support the argument in *The Token Is a Lie*: that `$/token` has
-become a fiction because token volume, reasoning surcharges, and per-task
-correctness all decouple from the number on the invoice. The scripts here run
-the same prompt against many models via [OpenRouter](https://openrouter.ai),
-record per-trial input/output/reasoning tokens, real billed cost, latency, and
-correctness, and produce publication-ready charts.
+> 📝 **Read the article:** [Dollar per Token is confusing](https://msanvido72.substack.com/p/the-dollar-per-token-pricing-model?r=1k1j28)
+
+Built to support the argument that `$/token` has become a fiction because
+token volume, reasoning surcharges, and per-task correctness all decouple
+from the number on the invoice. The scripts here run the same prompt against
+many models via [OpenRouter](https://openrouter.ai), record per-trial
+input/output/reasoning tokens, real billed cost, latency, and correctness,
+and produce publication-ready charts.
 
 ## Quick start
 
